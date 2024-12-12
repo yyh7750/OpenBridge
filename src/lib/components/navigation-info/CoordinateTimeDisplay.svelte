@@ -66,7 +66,7 @@
 		padding: 0.5rem 0;
 		font-size: 1.2rem;
 		font-weight: bold;
-		color: #4e4d4d;
+		color: #818181;
 	}
 
 	.divider {

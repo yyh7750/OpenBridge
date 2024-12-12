@@ -1,6 +1,7 @@
 <script>
 	import '@oicl/openbridge-webcomponents/dist/navigation-instruments/instrument-field/instrument-field.js';
 	import CoordinateTimeDisplay from '$lib/components/navigation-info/CoordinateTimeDisplay.svelte';
+	import CurrentLeg from '$lib/components/navigation-info/CurrentLeg.svelte';
 
 	let instrumentFieldArgs = {
 		hasSetpoint: false,
@@ -18,8 +19,7 @@
 		<CoordinateTimeDisplay></CoordinateTimeDisplay>
 	</div>
 	<div class="gird-item">
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
+		<CurrentLeg></CurrentLeg>
 	</div>
 	<div class="gird-item">
 		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
@@ -41,8 +41,8 @@
 
 <style>
 	.container {
-        width: 100%;
-        height: 100%;
+		width: 100%;
+		height: 100%;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
@@ -50,8 +50,8 @@
 		margin-top: 4px;
 	}
 	.container > div {
-        border: solid lightgray 1px;
-        text-align: -webkit-center;
+		border: solid lightgray 1px;
+		text-align: -webkit-center;
 		align-content: center;
 		background-color: white;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

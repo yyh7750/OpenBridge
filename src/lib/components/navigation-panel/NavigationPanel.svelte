@@ -33,7 +33,7 @@
 		height: 100%;
 		display: flex;
 		justify-content: space-around;
-		align-items: left;
+		align-items: center;
 		background-color: white;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		border: 1px solid #ddd;
