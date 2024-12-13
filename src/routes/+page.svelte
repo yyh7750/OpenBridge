@@ -39,9 +39,9 @@
 <style>
 	.container {
 		display: grid;
-		grid-template-columns: 1.5fr 2fr;
+		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1.5fr 1fr;
-		gap: 10px; /* 영역 간 간격 */
+		gap: 5px;
 		height: 100vh;
     background-color: #F7F7F7;
 	}

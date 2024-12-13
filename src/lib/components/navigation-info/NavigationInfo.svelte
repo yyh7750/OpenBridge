@@ -2,6 +2,8 @@
 	import '@oicl/openbridge-webcomponents/dist/navigation-instruments/instrument-field/instrument-field.js';
 	import CoordinateTimeDisplay from '$lib/components/navigation-info/CoordinateTimeDisplay.svelte';
 	import CurrentLeg from '$lib/components/navigation-info/CurrentLeg.svelte';
+	import SteeringMode from '$lib/components/navigation-info/SteeringMode.svelte';
+	import MotionIndicator from './MotionIndicator.svelte';
 
 	let instrumentFieldArgs = {
 		hasSetpoint: false,
@@ -22,20 +24,16 @@
 		<CurrentLeg></CurrentLeg>
 	</div>
 	<div class="gird-item">
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
+		<SteeringMode></SteeringMode>
 	</div>
 	<div class="gird-item">
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
+<MotionIndicator></MotionIndicator>
 	</div>
 	<div class="gird-item">
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
+
 	</div>
 	<div class="gird-item">
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
-		<obc-instrument-field {...instrumentFieldArgs}></obc-instrument-field>
+
 	</div>
 </div>
 

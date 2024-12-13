@@ -17,7 +17,8 @@
 			</div>
 			<div class="item">
 				<div class="value">{distanceToWOL}</div>
-				<div class="label">Dist to WOL NM</div>
+				<div class="label">Dist to</div> 
+				<div class="label">WOL NM</div>
 			</div>
 			<div class="item">
 				<div class="value">{timeToWOL}</div>
@@ -60,6 +61,7 @@
 	}
 
 	.title {
+		text-align: left;
 		font-size: 1rem;
 		font-weight: bold;
 		color: #333;
@@ -77,7 +79,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-		width: 45%;
+		width: 40%;
 	}
 
 	.item {
@@ -101,7 +103,7 @@
 		align-items: center;
 		background-color: #f8f8f8;
 		border-radius: 8px;
-		width: 55%;
+		width: 60%;
 		height: auto;
 	}
 
