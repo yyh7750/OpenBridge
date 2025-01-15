@@ -2,7 +2,7 @@
 	import Chart from 'chart.js/auto';
 	import { onMount } from 'svelte';
 
-	let data = [10, 20, 15, 40, 35];
+	let data = [20, 15, 40, 35];
 	let chartCanvas;
 
 	onMount(() => {

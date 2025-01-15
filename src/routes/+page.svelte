@@ -4,7 +4,7 @@
 
 	import NavigationPanel from '$lib/components/navigation-panel/NavigationPanel.svelte';
 	import NavigationInfo from '$lib/components/navigation-info/NavigationInfo.svelte';
-	import StwDisplay from '$lib/components/control-panel/stw/StwDisplay.svelte';
+	import ControlPanel from '$lib/components/control-panel/ControlPanel.svelte';
 
 	let data = null;
 
@@ -32,7 +32,7 @@
 		<NavigationInfo />
 	</div>
 	<div class="control-panel">
-		<StwDisplay />
+		<ControlPanel />
 	</div>
 </div>
 
