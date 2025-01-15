@@ -2,22 +2,33 @@
 	import Chart from 'chart.js/auto';
 	import { onMount } from 'svelte';
 
-	let data = [20, 15, 40, 35];
+	let data = [0, 0, 0, 0];
 	let chartCanvas;
+	let chart;
+
+	function updateChart(newValue) {
+		// 이전 데이터를 한 칸씩 왼쪽으로 밀기
+		data.shift();
+		data.push(newValue);
+
+		chart.data.datasets[0].data = [...data];
+		chart.update();
+	}
 
 	onMount(() => {
 		const ctx = chartCanvas.getContext('2d');
-		const chart = new Chart(ctx, {
+		chart = new Chart(ctx, {
 			type: 'line',
 			data: {
-				labels: data.map((_, index) => index + 1), // 데이터의 인덱스를 기준으로 라벨 생성
+				labels: data.map((_, index) => index + 1), // X축 라벨 (인덱스)
 				datasets: [
 					{
-                        tension: 0.4, // 그래프 곡선으로 표시
+						label: '',
 						backgroundColor: 'rgba(75, 192, 192, 0.2)',
 						borderColor: 'rgba(75, 192, 192, 1)',
 						borderWidth: 2,
 						fill: true,
+						tension: 0.4, // 곡선
 						data: data
 					}
 				]
@@ -25,19 +36,27 @@
 			options: {
 				scales: {
 					y: {
-						position: 'right' // Y축 라벨 반전 (오른쪽)
+						position: 'right', // Y축 라벨을 오른쪽으로 이동
 					},
 					x: {
-						display: false
+						ticks: {
+							display: false
+						}
 					}
 				},
 				plugins: {
 					legend: {
-						display: false
+						display: false // label hide
 					}
 				}
 			}
 		});
+
+		// Test
+		setInterval(() => {
+			const newValue = Math.floor(Math.random() * 10);
+			updateChart(newValue);
+		}, 500);
 	});
 </script>
 
