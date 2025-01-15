@@ -29,6 +29,7 @@
 	},
 	"dependencies": {
 		"@oicl/openbridge-webcomponents": "^0.0.15-dev-20241205184658",
-		"@tauri-apps/api": "^2.1.1"
+		"@tauri-apps/api": "^2.1.1",
+		"chart.js": "^4.4.7"
 	}
 }

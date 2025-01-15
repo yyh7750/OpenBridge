@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 
-	export let latitude = 41.05735;
-	export let longitude = -71.27794;
+	export let latitude = 0.0;
+	export let longitude = 0.0;
 
 	let currentTime = new Date();
 

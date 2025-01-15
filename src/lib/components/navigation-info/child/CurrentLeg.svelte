@@ -1,5 +1,5 @@
 <script>
-	export let course = 114;
+	export let course = 0;
 	export let distanceToWOL = 0; // 웨이포인트까지의 거리
 	export let timeToWOL = '00:00'; // 웨이포인트까지의 시간
 

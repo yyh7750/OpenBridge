@@ -1,9 +1,10 @@
 <script>
 	import '@oicl/openbridge-webcomponents/dist/navigation-instruments/instrument-field/instrument-field.js';
-	import CoordinateTimeDisplay from '$lib/components/navigation-info/CoordinateTimeDisplay.svelte';
-	import CurrentLeg from '$lib/components/navigation-info/CurrentLeg.svelte';
-	import SteeringMode from '$lib/components/navigation-info/SteeringMode.svelte';
-	import MotionIndicator from './MotionIndicator.svelte';
+	import CoordinateTimeDisplay from '$lib/components/navigation-info/child/CoordinateTimeDisplay.svelte';
+	import CurrentLeg from '$lib/components/navigation-info/child/CurrentLeg.svelte';
+	import SteeringMode from '$lib/components/navigation-info/child/SteeringMode.svelte';
+	import MotionIndicator from './child/MotionIndicator.svelte';
+	import DepthChart from '$lib/components/navigation-info/child/DepthChart.svelte';
 
 	let instrumentFieldArgs = {
 		hasSetpoint: false,
@@ -27,14 +28,12 @@
 		<SteeringMode></SteeringMode>
 	</div>
 	<div class="gird-item">
-<MotionIndicator></MotionIndicator>
+		<MotionIndicator></MotionIndicator>
 	</div>
 	<div class="gird-item">
-
+		<DepthChart></DepthChart>
 	</div>
-	<div class="gird-item">
-
-	</div>
+	<div class="gird-item"></div>
 </div>
 
 <style>

@@ -27,7 +27,7 @@ pub async fn start_udp_service(bind_addr: &str) -> Result<Arc<AppState>, String>
     let app_state = Arc::new(AppState::new(Arc::clone(&socket)));
 
     let app_state_clone = Arc::clone(&app_state);
-    tokio::spawn(async move {
+    tokio::spawn(async move { // tokio::spawn -> 비동기 태스크 생성
         loop {
             if let Some(received_data) = receive_data(&app_state_clone.socket).await {
                 // 수신된 데이터를 상태에 저장
